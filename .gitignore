@@ -1,18 +1,1 @@
-node_modules
-dist
-.DS_Store
-
-# Secrets — never commit. Apify API token (and any future Pinterest token).
-.apify-token
-.pinterest-token.json
-
-# StatiCrypt encryption metadata (salt/hash) — generated at deploy time.
-.staticrypt.json
-
-# Content images are local data, not source. Keep folder structure + briefs + manifests.
-content/**/*.jpg
-content/**/*.jpeg
-content/**/*.png
-content/**/*.webp
-content/**/*.gif
-content/**/*.avif
+# Published site — no ignores; all assets (including photos) must be served.
