@@ -1,0 +1,10 @@
+{
+  "_comment": "RSS source: map a room slug to a PUBLIC whole-BOARD URL (sections have no RSS — use apify.json for those). Then `npm run sync-pins`. Example: https://www.pinterest.com/yourusername/your-board-name",
+  "living-room": "",
+  "dining-room": "",
+  "kitchen": "",
+  "playroom": "",
+  "master-bedroom": "",
+  "kids-bedroom": "",
+  "bathroom": ""
+}

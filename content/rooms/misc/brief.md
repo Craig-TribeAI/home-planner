@@ -1,0 +1,1 @@
+**Catch-all.** Everything pinned to the Quentin St board that isn't filed under a specific room's section — plus the board's own "misc" section. This is the overflow so no inspiration gets lost: ideas that span rooms, things you haven't sorted yet, or general direction for the whole house.

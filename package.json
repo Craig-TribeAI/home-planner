@@ -1,0 +1,30 @@
+{
+  "name": "home-planner",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sync-pins": "node scripts/sync-pins.mjs",
+    "build:pages": "vite build && node scripts/postbuild-copy-content.mjs",
+    "encrypt": "staticrypt dist/index.html --short -d dist",
+    "deploy": "gh-pages -d dist -b gh-pages --dotfiles"
+  },
+  "dependencies": {
+    "@tabler/icons-react": "^3.34.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.26.2",
+    "remark-gfm": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "fast-xml-parser": "^4.5.0",
+    "gh-pages": "^6.3.0",
+    "staticrypt": "^3.5.4",
+    "vite": "^5.4.8"
+  }
+}

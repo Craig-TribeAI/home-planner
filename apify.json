@@ -1,0 +1,27 @@
+{
+  "_comment": "Apify-based Pinterest SECTION sync (section URLs have no RSS feed; the official API was unavailable). Put your Apify API token in a gitignored `.apify-token` file (or APIFY_TOKEN env). `npm run sync-pins` runs this AND the RSS boards.json. Keys are APP room slugs; values are the Pinterest SECTION URLs (whose own slug may differ, e.g. kids-bedroom -> kid-bedrooms).",
+
+  "actorId": "7AmGS416wqlRTFhWm",
+  "_actorNote": "imbuedata 'Pinterest API Scraper' (pay-per-use, no rental). Section sync is a two-step flow: getBoardSectionBySlug -> getSectionPins (handled in scripts/lib/apify-sync.mjs).",
+
+  "maxItems": 100,
+  "imagePreference": ["orig", "736x", "474x"],
+
+  "rooms": {
+    "entryway": "https://www.pinterest.com/craigbarowsky/quentin-st/entryway/",
+    "living-room": "https://www.pinterest.com/craigbarowsky/quentin-st/living-room/",
+    "dining-room": "https://www.pinterest.com/craigbarowsky/quentin-st/dining-room/",
+    "kitchen": "https://www.pinterest.com/craigbarowsky/quentin-st/kitchen/",
+    "playroom": "https://www.pinterest.com/craigbarowsky/quentin-st/playroom/",
+    "master-bedroom": "https://www.pinterest.com/craigbarowsky/quentin-st/master-bedroom/",
+    "kids-bedroom": "https://www.pinterest.com/craigbarowsky/quentin-st/kid-bedrooms/",
+    "bathroom": "https://www.pinterest.com/craigbarowsky/quentin-st/bathroom/",
+    "misc": "https://www.pinterest.com/craigbarowsky/quentin-st/misc/"
+  },
+
+  "catchAll": {
+    "_note": "After all sections sync, fetch ALL pins on this board and add to `room` any not already present in any room (i.e. unsectioned / overflow pins). Runs last so cross-room dedup is complete.",
+    "room": "misc",
+    "boardUrl": "https://www.pinterest.com/craigbarowsky/quentin-st/"
+  }
+}
